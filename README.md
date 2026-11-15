@@ -12,7 +12,12 @@ Claude Code:
 claude mcp add hello-hello -- npx -y github:tablackmore/hello-hello
 ```
 
-Claude Desktop (`claude_desktop_config.json`):
+Claude Desktop (recommended): download the extension
+[`hello-hello.mcpb`](https://github.com/tablackmore/hello-hello/releases/latest/download/hello-hello.mcpb),
+then double-click it (or drag it onto **Settings → Extensions**) and choose **Install**.
+No Node installation needed.
+
+Claude Desktop, manual setup with your own Node 18+ (`claude_desktop_config.json`):
 
 ```json
 {"mcpServers":{"hello-hello":{"command":"npx","args":["-y","github:tablackmore/hello-hello"]}}}
@@ -22,9 +27,9 @@ Requires Node 18 or later. No other dependencies; the book data is bundled.
 
 ## Tools
 
-- `search_book {query, limit=8}`: full-text search, tolerant of typos and diacritics, page-level hits with snippets.
+- `search_book {query, limit=8}`: full-text search, tolerant of typos and diacritics, page-level hits with snippets, each with its page link and `section` (nearest heading, with a link to its anchor).
 - `lookup_index {term}`: look up a term in the printed index and get page links.
-- `get_passage {chapter, page?, heading?, context=0}`: read a page, or the page under a heading, with optional neighbouring pages.
+- `get_passage {chapter, page?, heading?, context=0}`: read a page, or the page under a heading, with optional neighbouring pages; includes the `section` heading and its anchor link.
 - `get_chapter {chapter, include_text=false, offset=0}`: chapter overview, or its text in slices of up to 20,000 characters with `next_offset`.
 - `list_figures {chapter?, topic?}`: figures and captions; only figures with `published: true` have an `imageUrl`.
 - `list_contents {}`: all chapters with page ranges and links.

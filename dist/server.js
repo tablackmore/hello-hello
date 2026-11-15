@@ -38717,6 +38717,31 @@ var wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 var SPACE_OR_PUNCTUATION = /[\n\r\p{Z}\p{P}]+/u;
 
 // mcp/src/search.ts
+function blockIndex(text, needle, from) {
+  for (let at = text.indexOf(needle, from); at >= 0; at = text.indexOf(needle, at + 1)) {
+    const end = at + needle.length;
+    if ((at === 0 || text[at - 1] === "\n") && (end === text.length || text[end] === "\n")) return at;
+  }
+  return -1;
+}
+function sectionFor(chapter, pageIndex, pos = 0) {
+  const page = chapter.pages[pageIndex];
+  if (!page) return null;
+  let found = null;
+  let from = 0;
+  for (const h of page.headings) {
+    const at = blockIndex(page.text, h.text, from);
+    if (at < 0 || at > pos) break;
+    found = h;
+    from = at + h.text.length;
+  }
+  if (found) return found;
+  for (let i = pageIndex - 1; i >= 0; i--) {
+    const hs = chapter.pages[i].headings;
+    if (hs.length) return hs[hs.length - 1];
+  }
+  return page.headings[0] ?? null;
+}
 function normalizeTerm(term) {
   return term.toLowerCase().normalize("NFD").replace(new RegExp("\\p{M}", "gu"), "");
 }
@@ -38731,14 +38756,16 @@ function normalizeWithMap(text) {
   return { norm, map: map2 };
 }
 var RADIUS = 160;
-function makeSnippet(text, terms) {
+function firstMatch(text, terms) {
   const { norm, map: map2 } = normalizeWithMap(text);
   let at = -1;
   for (const t of terms) {
     const i = norm.indexOf(t);
     if (i >= 0 && (at < 0 || i < at)) at = i;
   }
-  const centre = at >= 0 ? map2[at] ?? 0 : 0;
+  return at >= 0 ? map2[at] ?? 0 : 0;
+}
+function makeSnippet(text, centre) {
   const start = Math.max(0, centre - RADIUS);
   const end = Math.min(text.length, centre + RADIUS);
   const body = text.slice(start, end).replace(/\s+/g, " ").trim();
@@ -38746,13 +38773,15 @@ function makeSnippet(text, terms) {
 }
 function createSearch(bundle) {
   const docs = bundle.chapters.flatMap(
-    (c) => c.pages.map((p) => ({
+    (c) => c.pages.map((p, pageIndex) => ({
       id: `${c.id}:${p.number}`,
+      chapter: c,
+      pageIndex,
       chapterId: c.id,
       page: p.number,
       url: p.url,
       text: p.text,
-      headings: p.headings.join(" "),
+      headings: p.headings.map((h) => h.text).join(" "),
       chapterTitle: c.title
     }))
   );
@@ -38769,12 +38798,14 @@ function createSearch(bundle) {
     search(q, limit = 8) {
       return mini.search(q).slice(0, limit).map((r) => {
         const d = byId.get(r.id);
+        const at = firstMatch(d.text, r.terms);
         return {
           chapterId: d.chapterId,
           chapterTitle: titles.get(d.chapterId) ?? "",
           page: d.page,
-          snippet: makeSnippet(d.text, r.terms),
+          snippet: makeSnippet(d.text, at),
           url: d.url,
+          section: sectionFor(d.chapter, d.pageIndex, at),
           score: Math.round(r.score * 100) / 100
         };
       });
@@ -38832,6 +38863,7 @@ function createServer(bundle) {
         page: h.page,
         snippet: h.snippet,
         url: h.url,
+        section: h.section,
         score: h.score
       }));
       return ok({ query, hits }, hits[0]?.url ?? bundle.baseUrl);
@@ -38841,10 +38873,13 @@ function createServer(bundle) {
     "lookup_index",
     {
       description: "Look up a term in the printed book index; returns page links.",
-      inputSchema: { term: external_exports.string() }
+      inputSchema: {
+        term: external_exports.string().trim().min(1, 'term must not be empty: give a word or name to look up, e.g. "Abraham" or "Toba".')
+      }
     },
     safe(({ term }) => {
       const q = normalizeTerm(term).trim();
+      if (!q) throw new Error('term must not be empty: give a word or name to look up, e.g. "Abraham" or "Toba".');
       const entries = bundle.index.filter((e) => normalizeTerm(e.term).includes(q) || (e.sub ?? []).some((s) => normalizeTerm(s.label).includes(q))).slice(0, 10).map((e) => ({
         term: e.term,
         sub: e.sub?.map((s) => ({ label: s.label, pages: s.pages })),
@@ -38873,18 +38908,29 @@ function createServer(bundle) {
         if (idx < 0) throw new Error(`Page ${page} is not in chapter ${c.id} (pages ${c.startPage}-${c.endPage}).`);
       } else if (heading) {
         const h = normalizeTerm(heading);
-        idx = c.pages.findIndex((p) => p.headings.some((x) => normalizeTerm(x).includes(h)));
+        idx = c.pages.findIndex((p) => p.headings.some((x) => normalizeTerm(x.text).includes(h)));
         if (idx < 0) throw new Error(`No heading containing "${heading}" in chapter ${c.id}.`);
       }
-      const slice = c.pages.slice(Math.max(0, idx - context), idx + context + 1);
+      const start = Math.max(0, idx - context);
+      const slice = c.pages.slice(start, idx + context + 1);
       const anchor2 = c.pages[idx];
+      const wanted = heading ? normalizeTerm(heading) : null;
+      const section = wanted && anchor2.headings.find((x) => normalizeTerm(x.text).includes(wanted)) || sectionFor(c, idx);
       return ok(
         {
           chapter: c.id,
           chapterTitle: c.title,
           page: anchor2.number,
           url: anchor2.url,
-          passages: slice.map((p) => ({ chapter: c.id, page: p.number, url: p.url, headings: p.headings, text: p.text }))
+          section,
+          passages: slice.map((p, k) => ({
+            chapter: c.id,
+            page: p.number,
+            url: p.url,
+            section: sectionFor(c, start + k),
+            headings: p.headings,
+            text: p.text
+          }))
         },
         anchor2.url
       );
