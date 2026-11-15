@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="p7d1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E2B37"/>
+    </marker>
+  </defs>
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <!-- space panel -->
+  <rect x="24" y="24" width="752" height="276" rx="6" fill="#1E2B37"/>
+  <!-- expanding universe cone -->
+  <polygon points="150,160 776,40 776,282" fill="#4A7FA7"/>
+  <!-- early hot particles -->
+  <g stroke="#1E2B37" stroke-width="1">
+    <circle cx="215" cy="140" r="6" fill="#F4E1B3"/><circle cx="230" cy="172" r="5" fill="#A94A3A"/>
+    <circle cx="250" cy="128" r="7" fill="#D8E4C8"/><circle cx="262" cy="160" r="6" fill="#F4E1B3"/>
+    <circle cx="258" cy="195" r="7" fill="#A94A3A"/><circle cx="285" cy="115" r="6" fill="#A94A3A"/>
+    <circle cx="292" cy="148" r="8" fill="#D8E4C8"/><circle cx="296" cy="182" r="6" fill="#F4E1B3"/>
+    <circle cx="300" cy="212" r="5" fill="#D8E4C8"/><circle cx="318" cy="100" r="5" fill="#F4E1B3"/>
+    <circle cx="325" cy="132" r="6" fill="#A94A3A"/><circle cx="330" cy="165" r="7" fill="#F4E1B3"/>
+    <circle cx="328" cy="200" r="6" fill="#A94A3A"/><circle cx="322" cy="228" r="5" fill="#D8E4C8"/>
+  </g>
+  <!-- first stars -->
+  <g fill="#FFFFFF">
+    <path d="M385,110 l3,9 9,3 -9,3 -3,9 -3,-9 -9,-3 9,-3z"/>
+    <path d="M410,190 l3,9 9,3 -9,3 -3,9 -3,-9 -9,-3 9,-3z"/>
+    <path d="M440,140 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+    <path d="M370,220 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+    <path d="M470,95 l2,6 6,2 -6,2 -2,6 -2,-6 -6,-2 6,-2z"/>
+    <path d="M495,215 l3,9 9,3 -9,3 -3,9 -3,-9 -9,-3 9,-3z"/>
+    <circle cx="520" cy="120" r="2.5"/><circle cx="610" cy="230" r="2.5"/><circle cx="650" cy="90" r="2.5"/>
+    <circle cx="740" cy="200" r="2.5"/><circle cx="600" cy="80" r="2"/><circle cx="455" cy="250" r="2"/>
+  </g>
+  <!-- first galaxy -->
+  <g transform="translate(560,160) rotate(-20)">
+    <ellipse cx="0" cy="0" rx="46" ry="16" fill="#CFE0EC" stroke="#FFFFFF" stroke-width="1.5"/>
+    <ellipse cx="0" cy="0" rx="14" ry="7" fill="#F4E1B3"/>
+  </g>
+  <!-- Earth -->
+  <circle cx="700" cy="160" r="30" fill="#4A7FA7" stroke="#FFFFFF" stroke-width="1.5"/>
+  <path d="M684,142 c10,-6 20,2 16,10 c-4,8 -16,6 -18,16 c-2,8 -10,4 -12,-4 c-2,-10 6,-18 14,-22z" fill="#6F8F4E"/>
+  <path d="M708,166 c8,-2 16,4 12,12 c-4,8 -14,10 -18,4 c-4,-6 0,-14 6,-16z" fill="#6F8F4E"/>
+  <!-- Big Bang point -->
+  <g transform="translate(150,160)">
+    <path d="M0,-34 L8,-8 34,0 8,8 0,34 -8,8 -34,0 -8,-8z" fill="#F4E1B3"/>
+    <circle cx="0" cy="0" r="14" fill="#D39B2A"/>
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+  </g>
+  <text x="100" y="228" text-anchor="middle" font-size="22" font-weight="600" fill="#FFFFFF">13.8</text>
+  <text x="100" y="250" text-anchor="middle" font-size="15" font-weight="400" fill="#CFE0EC">billion years ago</text>
+  <!-- timeline strip -->
+  <rect x="24" y="300" width="752" height="136" rx="6" fill="#E4E8EC"/>
+  <rect x="24" y="300" width="752" height="10" fill="#E4E8EC"/>
+  <text x="40" y="377" font-size="18" font-weight="700" fill="#1E2B37">After the Big Bang</text>
+  <line x1="208" y1="371" x2="318" y2="371" stroke="#1E2B37" stroke-width="2" marker-end="url(#p7d1-arrow)"/>
+  <g stroke="#1E2B37" stroke-width="2" marker-end="url(#p7d1-arrow)">
+    <line x1="400" y1="306" x2="400" y2="334"/>
+    <line x1="560" y1="306" x2="560" y2="334"/>
+    <line x1="700" y1="306" x2="700" y2="334"/>
+  </g>
+  <g text-anchor="middle" fill="#1E2B37" font-size="16" font-weight="600">
+    <text x="400" y="362">About 100</text>
+    <text x="400" y="381">million years</text>
+    <text x="560" y="362">About 300</text>
+    <text x="560" y="381">million years</text>
+    <text x="700" y="362">9.2 billion</text>
+    <text x="700" y="381">years</text>
+  </g>
+  <g text-anchor="middle" fill="#6B7785" font-size="14" font-weight="400">
+    <text x="400" y="404">First stars</text>
+    <text x="560" y="404">Earliest galaxy</text>
+    <text x="560" y="421">seen so far</text>
+    <text x="700" y="404">Earth forms</text>
+  </g>
+</svg>

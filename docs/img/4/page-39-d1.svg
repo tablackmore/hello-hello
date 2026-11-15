@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="640" fill="#FFFFFF"/>
+  <!-- Badge -->
+  <circle cx="400" cy="320" r="290" fill="#E4E8EC" stroke="#1E2B37" stroke-width="3"/>
+  <circle cx="400" cy="320" r="274" fill="none" stroke="#6B7785" stroke-width="1.5"/>
+  <!-- Upper half: ordered cosmos -->
+  <text x="400" y="150" text-anchor="middle" font-size="56" font-weight="700" fill="#1E2B37">Relativity</text>
+  <text x="400" y="196" text-anchor="middle" font-size="28" font-weight="400" fill="#4A7FA7">The ordered cosmos</text>
+  <!-- Middle line: G play [die] no! -->
+  <text x="222" y="352" text-anchor="middle" font-size="84" font-weight="700" fill="#1E2B37">G</text>
+  <text x="292" y="316" text-anchor="middle" font-size="30" font-weight="600" fill="#1E2B37">play</text>
+  <g stroke="#1E2B37" stroke-width="2.5" stroke-linejoin="round">
+    <!-- simple die: front face and two visible sides -->
+    <path d="M362,268 L402,248 L462,264 L422,284 Z" fill="#FFFFFF"/>
+    <path d="M362,268 L422,284 L422,354 L362,338 Z" fill="#FFFFFF"/>
+    <path d="M422,284 L462,264 L462,334 L422,354 Z" fill="#E4E8EC"/>
+  </g>
+  <g fill="#1E2B37">
+    <!-- standard right-handed die: 1 on top, 2 front-left, 3 right (1-2-3 anticlockwise round the shared corner; opposite faces sum to 7) -->
+    <ellipse cx="412" cy="266" rx="8" ry="4.5"/>
+    <circle cx="377" cy="289.5" r="5"/>
+    <circle cx="407" cy="332.5" r="5"/>
+    <circle cx="432" cy="296.5" r="4.5"/>
+    <circle cx="442" cy="309" r="4.5"/>
+    <circle cx="452" cy="321.5" r="4.5"/>
+  </g>
+  <text x="540" y="344" text-anchor="middle" font-size="64" font-weight="700" fill="#A94A3A">no!</text>
+  <!-- Lower half: quantum -->
+  <text x="400" y="448" text-anchor="middle" font-size="56" font-weight="700" fill="#1E2B37">Quantum</text>
+  <text x="400" y="494" text-anchor="middle" font-size="28" font-weight="400" fill="#4A7FA7">indeterminacy</text>
+</svg>

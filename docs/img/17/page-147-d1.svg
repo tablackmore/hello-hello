@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+  <rect x="210" y="24" width="380" height="492" rx="6" fill="#E4E8EC" stroke="#1E2B37" stroke-width="1.5"/>
+  <path d="M378,50 L422,50 L422,100 L460,100 L460,140 L422,140 L422,170 L520,170 L520,214 L422,214 L422,392.9 L470,410 L470,450 L422,432.9 L422,490 L378,490 L378,417.1 L330,400 L330,360 L378,377.1 L378,214 L280,214 L280,170 L378,170 L378,140 L340,140 L340,100 L378,100 Z" fill="#F4E1B3" stroke="#1E2B37" stroke-width="4" stroke-linejoin="round"/>
+</svg>

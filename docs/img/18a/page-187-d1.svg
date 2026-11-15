@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <g id="p187d1-golf" stroke="#1E2B37" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- fairway -->
+    <path d="M24,300 Q400,220 776,300 L776,470 Q776,476 770,476 L30,476 Q24,476 24,470 Z" fill="#D8E4C8"/>
+    <!-- putting green -->
+    <ellipse cx="410" cy="360" rx="300" ry="95" fill="#6F8F4E"/>
+    <!-- hole -->
+    <ellipse cx="460" cy="360" rx="30" ry="10" fill="#1E2B37"/>
+    <!-- flagpole -->
+    <rect x="455" y="70" width="10" height="292" rx="3" fill="#F4E1B3"/>
+    <!-- flag -->
+    <path d="M465,76 L575,108 L465,140 Z" fill="#A94A3A"/>
+    <!-- ball -->
+    <circle cx="300" cy="380" r="16" fill="#FFFFFF"/>
+    <g fill="#6B7785" stroke="none">
+      <circle cx="294" cy="375" r="1.8"/><circle cx="303" cy="373" r="1.8"/>
+      <circle cx="298" cy="384" r="1.8"/><circle cx="307" cy="382" r="1.8"/>
+    </g>
+  </g>
+</svg>

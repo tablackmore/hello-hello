@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <!-- Circle AREAS are to scale by erupted magma volume (dense-rock equivalent).
+       Radius = 200 * sqrt(V / 2800 km3): Toba 2800 -> 200, Krakatoa 12 -> 13.09.
+       Sources are listed in data/diagrams/ch7-p60-d1.notes.json. -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Toba -->
+  <circle cx="270" cy="236" r="200" fill="#F4E1B3" stroke="#D39B2A" stroke-width="2"/>
+  <text x="270" y="210" text-anchor="middle" font-size="26" font-weight="700" fill="#1E2B37">Toba</text>
+  <text x="270" y="244" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37">74,000 years ago</text>
+  <text x="270" y="276" text-anchor="middle" font-size="16" font-weight="600" fill="#1E2B37">about 2,800 km³</text>
+
+  <!-- Krakatoa -->
+  <circle cx="640" cy="236" r="13.09" fill="#F4E1B3" stroke="#D39B2A" stroke-width="2"/>
+  <text x="640" y="284" text-anchor="middle" font-size="20" font-weight="700" fill="#1E2B37">Krakatoa</text>
+  <text x="640" y="308" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37">1883</text>
+  <text x="640" y="332" text-anchor="middle" font-size="16" font-weight="600" fill="#1E2B37">about 12 km³</text>
+
+  <!-- Scale note -->
+  <text x="400" y="476" text-anchor="middle" font-size="14" font-weight="400" fill="#6B7785">Circle area = volume of magma erupted</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+  <!-- connectors -->
+  <g stroke="#6B7785" stroke-width="2" stroke-linecap="round">
+    <line x1="400" y1="150" x2="400" y2="205"/>
+    <line x1="400" y1="325" x2="400" y2="385"/>
+    <line x1="235" y1="265" x2="270" y2="265"/>
+    <line x1="530" y1="265" x2="565" y2="265"/>
+  </g>
+  <!-- centre -->
+  <ellipse cx="400" cy="265" rx="135" ry="62" fill="#CFE0EC" stroke="#4A7FA7" stroke-width="2"/>
+  <g font-size="16" font-weight="600" fill="#1E2B37" text-anchor="middle">
+    <text x="400" y="250">Fallback position</text>
+    <text x="400" y="271">if God&#8217;s existence is</text>
+    <text x="400" y="292">seriously challenged</text>
+  </g>
+  <!-- Faith (top, largest) -->
+  <ellipse cx="400" cy="90" rx="150" ry="62" fill="#F4E1B3" stroke="#D39B2A" stroke-width="2"/>
+  <text x="400" y="92" text-anchor="middle" font-size="26" font-weight="700" fill="#1E2B37"><tspan fill="#A94A3A">F</tspan>aith</text>
+  <text x="400" y="118" text-anchor="middle" font-size="15" font-weight="400" fill="#6B7785">the big one</text>
+  <!-- God is unknown (left) -->
+  <ellipse cx="145" cy="265" rx="95" ry="55" fill="#E4E8EC" stroke="#1E2B37" stroke-width="1.5"/>
+  <text x="145" y="258" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37">God is</text>
+  <text x="145" y="282" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37"><tspan fill="#A94A3A" font-weight="700">U</tspan>nknown</text>
+  <!-- God is inside me (right) -->
+  <ellipse cx="655" cy="265" rx="95" ry="55" fill="#E4E8EC" stroke="#1E2B37" stroke-width="1.5"/>
+  <text x="655" y="258" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37">God is</text>
+  <text x="655" y="282" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37"><tspan fill="#A94A3A" font-weight="700">I</tspan>nside me</text>
+  <!-- Free will (bottom) -->
+  <ellipse cx="400" cy="440" rx="110" ry="55" fill="#E4E8EC" stroke="#1E2B37" stroke-width="1.5"/>
+  <text x="400" y="433" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37"><tspan fill="#A94A3A" font-weight="700">F</tspan>ree</text>
+  <text x="400" y="457" text-anchor="middle" font-size="18" font-weight="600" fill="#1E2B37">will</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="p189d1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E2B37"/>
+    </marker>
+  </defs>
+  <rect width="800" height="620" fill="#FFFFFF"/>
+  <g stroke="#1E2B37" stroke-linejoin="round" stroke-linecap="round">
+    <!-- happy face -->
+    <circle cx="400" cy="140" r="110" fill="#D39B2A" stroke-width="3"/>
+    <ellipse cx="362" cy="110" rx="10" ry="15" fill="#1E2B37" stroke="none"/>
+    <path d="M426,112 Q440,98 454,112" fill="none" stroke-width="6"/>
+    <path d="M340,160 Q400,225 460,160" fill="none" stroke-width="7"/>
+    <!-- double-headed arrow -->
+    <line x1="400" y1="264" x2="400" y2="356" stroke-width="3" marker-start="url(#p189d1-arrow)" marker-end="url(#p189d1-arrow)"/>
+    <!-- unhappy face -->
+    <circle cx="400" cy="480" r="110" fill="#CFE0EC" stroke-width="3"/>
+    <path d="M350,450 L380,438 M450,450 L420,438" fill="none" stroke-width="5"/>
+    <ellipse cx="368" cy="468" rx="9" ry="12" fill="#1E2B37" stroke="none"/>
+    <ellipse cx="432" cy="468" rx="9" ry="12" fill="#1E2B37" stroke="none"/>
+    <path d="M345,535 Q400,490 455,535" fill="none" stroke-width="7"/>
+    <path d="M444,486 Q438,500 444,508 Q452,512 456,504 Q458,496 444,486 Z" fill="#4A7FA7" stroke-width="1.5"/>
+  </g>
+</svg>

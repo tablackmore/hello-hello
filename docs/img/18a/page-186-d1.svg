@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <path id="p186d1-infinity" d="M400,180 C345,85 190,85 190,180 C190,275 345,275 400,180 C455,85 610,85 610,180 C610,275 455,275 400,180 Z"
+        fill="none" stroke="#1E2B37" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="400" y="330" text-anchor="middle" font-size="16" font-weight="600" fill="#1E2B37">Infinity symbol</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 488"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="488" fill="#FFFFFF"/>
+  <g stroke="#1E2B37" stroke-width="1.5" stroke-linejoin="round">
+    <polygon points="109,380 691,380 760,464 40,464" fill="#D8E4C8"/>
+    <polygon points="177,296 623,296 691,380 109,380" fill="#CFE0EC"/>
+    <polygon points="246,212 554,212 623,296 177,296" fill="#EDE5D0"/>
+    <polygon points="315,128 485,128 554,212 246,212" fill="#E4E8EC"/>
+    <polygon points="400,24 485,128 315,128" fill="#F4E1B3"/>
+  </g>
+  <polygon points="400,24 485,128 315,128" fill="none" stroke="#D39B2A" stroke-width="2" stroke-linejoin="round"/>
+  <g font-size="16" font-weight="600" fill="#1E2B37" text-anchor="middle">
+    <text x="400" y="98">5. Self-</text>
+    <text x="400" y="117">actualisation</text>
+    <text x="400" y="167">4. Esteem</text>
+    <text x="400" y="259">3. Love &amp; belonging</text>
+    <text x="400" y="343">2. Safety &amp; security</text>
+    <text x="400" y="419">1. Basic needs for survival</text>
+  </g>
+  <g font-size="14" font-weight="400" fill="#6B7785" text-anchor="middle">
+    <text x="400" y="187">self-respect, respect of others</text>
+    <text x="400" y="441">food, water, warmth, rest</text>
+  </g>
+</svg>

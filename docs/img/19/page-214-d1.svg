@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560"
+     font-family="'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+  <!-- connecting ring -->
+  <ellipse cx="400" cy="280" rx="251" ry="210" fill="none" stroke="#6B7785" stroke-width="2"/>
+  <!-- centre -->
+  <ellipse cx="400" cy="280" rx="150" ry="70" fill="#F4E1B3" stroke="#D39B2A" stroke-width="2"/>
+  <text x="400" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2B37">Secularism</text>
+  <text x="400" y="304" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2B37">Free speech</text>
+  <!-- satellites -->
+  <g font-size="16" font-weight="600" fill="#1E2B37" text-anchor="middle">
+    <g stroke="#4A7FA7" stroke-width="1.5" fill="#CFE0EC">
+      <rect x="305" y="42" width="190" height="56" rx="6"/>
+      <rect x="522" y="147" width="190" height="56" rx="6"/>
+      <rect x="522" y="357" width="190" height="56" rx="6"/>
+      <rect x="305" y="462" width="190" height="56" rx="6"/>
+      <rect x="88" y="357" width="190" height="56" rx="6"/>
+      <rect x="88" y="147" width="190" height="56" rx="6"/>
+    </g>
+    <text x="400" y="76">Faiths</text>
+    <text x="617" y="181">Sexual orientation</text>
+    <text x="617" y="391">Age</text>
+    <text x="400" y="496">Politics</text>
+    <text x="183" y="391">Atheists, humanists</text>
+    <text x="183" y="181">Gender</text>
+  </g>
+</svg>
