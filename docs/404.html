@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found — Hello, hello, hello</title>
+<meta name="description" content="Hello, hello, hello — Good God, any God, a book by Nigel Blackmore.">
+<meta name="author" content="Nigel Blackmore">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F7F4EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1C1A17" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<link rel="stylesheet" href="/hello-hello/style.css?v=27b13c14">
+<link rel="manifest" href="/hello-hello/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hello, hello">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="/hello-hello/icons/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/hello-hello/icons/icon.svg">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script>
+</head>
+<body class="page">
+<a class="skip" href="#content">Skip to text</a>
+<header class="site-head" data-pagefind-ignore>
+<div class="bar">
+<button class="tool back-btn" type="button" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<a class="brand" href="/hello-hello/">Hello, hello, hello</a>
+<nav class="tools" aria-label="Site">
+<a class="tool" href="/hello-hello/contents/" aria-label="Contents"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="lbl">Contents</span></a>
+<a class="tool wide-only" href="/hello-hello/book-index/" aria-label="Index"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><span class="lbl">Index</span></a>
+<a class="tool" href="/hello-hello/search/" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><span class="lbl">Search</span></a>
+<span class="wide-only"><button class="tool theme-toggle" type="button" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" class="fill"/></svg></button></span>
+</nav>
+</div>
+</header>
+<main id="content" class="prose">
+<h1>Page not found</h1>
+<p>That page isn’t in the book. Try the <a href="/hello-hello/contents/">contents</a>, the <a href="/hello-hello/book-index/">index</a> or <a href="/hello-hello/search/">search</a>.</p>
+</main>
+
+<footer class="site-foot" data-pagefind-ignore>
+<nav class="foot-links" aria-label="Book">
+<a href="/hello-hello/contents/">Contents</a>
+<a href="/hello-hello/book-index/">Index</a>
+<a href="/hello-hello/search/">Search</a>
+<a href="/hello-hello/credits/">Picture credits</a>
+<a href="/hello-hello/about/">About</a>
+</nav>
+<p class="note">Page numbers follow the original printed edition.</p>
+<p class="copy">© Nigel Blackmore. All rights reserved.</p>
+<p class="foot-theme"><button class="tool theme-toggle labelled" type="button" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" class="fill"/></svg><span>Light / dark</span></button></p>
+</footer>
+<script>(function(){var d=document.documentElement;function cur(){var t=d.getAttribute('data-theme');if(t)return t;return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}function label(){var n=cur()==='dark'?'light':'dark';document.querySelectorAll('.theme-toggle').forEach(function(b){b.setAttribute('aria-label','Switch to '+n+' theme');b.title='Switch to '+n+' theme'})}document.querySelectorAll('.theme-toggle').forEach(function(b){b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';d.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}label()})});label()})();</script>
+<script>(function(){var B="/hello-hello/";document.querySelectorAll('.back-btn').forEach(function(b){b.addEventListener('click',function(){if(history.length>1)history.back();else location.href=B})});var m=document.querySelector('main.chapter');if(m){var t=document.title.split(' — ')[0],tm;addEventListener('scroll',function(){clearTimeout(tm);tm=setTimeout(function(){var ps=m.querySelectorAll('.pg'),c=null;for(var i=0;i<ps.length;i++){if(ps[i].getBoundingClientRect().top<140)c=ps[i];else break}if(!c)return;try{localStorage.setItem('hh-last',JSON.stringify({u:location.pathname+'#'+c.id,t:t,p:c.textContent}))}catch(e){}},400)},{passive:true})}var r=document.getElementById('resume');if(r){try{var l=JSON.parse(localStorage.getItem('hh-last')||'null');if(l&&typeof l.u==='string'&&l.u.indexOf(B)===0){var a=document.createElement('a');a.className='button';a.href=l.u;a.textContent='Continue reading';var s=document.createElement('span');s.className='resume-where';s.textContent=l.t+' · '+l.p;r.appendChild(a);r.appendChild(s);r.hidden=false}}catch(e){}}})();</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/hello-hello/sw.js',{scope:'/hello-hello/'}).catch(function(){})})}</script>
+</body>
+</html>
