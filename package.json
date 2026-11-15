@@ -1,0 +1,13 @@
+{
+  "name": "hello-hello-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to search and quote \"Hello, hello, hello\" by Nigel Blackmore, with links to the live site. © Nigel Blackmore. All rights reserved.",
+  "type": "module",
+  "bin": { "hello-hello-mcp": "dist/server.js" },
+  "files": ["dist", "data", "README.md"],
+  "engines": { "node": ">=18" },
+  "license": "UNLICENSED",
+  "author": "Nigel Blackmore",
+  "homepage": "https://tablackmore.github.io/hello-hello/",
+  "repository": { "type": "git", "url": "git+https://github.com/tablackmore/hello-hello.git" }
+}
